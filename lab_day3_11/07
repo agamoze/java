@@ -1,0 +1,88 @@
+/* performed on 11/07/26 
+snippet for studying default and parameterised constructor*/
+/*
+class student 
+{
+    String name;
+    int age;
+
+   // default constructor
+    // student(){
+    //     name="agam";
+    //     age=19;
+    // }
+
+      student(String n, int a){
+        name=n;
+        age=a;
+    }
+    void display(){
+        System.out.println("Name: " + name + "\n" + "Age: " + age);
+
+    }
+}
+    public class Main{
+        public static void main(String[] args){
+            student s1 = new student("agam", 19); 
+            s1.display();
+        }
+    }
+*/
+
+// staic methods in java 
+// class calculator{
+//     static int add(int a, int b){
+//         return a+b;
+//     }
+//     static int subtract(int a, int b){
+//         return a-b;
+//     }
+
+// }
+
+/*
+class counter{
+    static int count=0;
+    counter(){
+        count++;
+        System.out.println("the object is created"+"Counter: " + count);
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        counter c1 = new counter();
+        counter c2 = new counter();
+        counter c3 = new counter();
+        System.out.println("Total objects created: " + counter.count);
+    }
+}
+*/
+
+// class student{
+//     int id;
+//     String name;
+//     public static void main(String[] args){
+//         student s1 = new student();
+//         s1.id = 001;
+//         s1.name = "agam";
+//         System.out.println(s1.id + s1.name);
+
+//     }
+// }
+
+
+class outer{
+    class inner{
+        void display(){
+            System.out.println("inner");
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        outer o = new outer();
+        outer.inner i = o.new inner();
+        i.display();
+    }
+}
